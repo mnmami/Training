@@ -15,7 +15,7 @@ cd myvagrant
 ```
 Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "echo Hello there"
-  config.ssh.insert_key = false
+  # config.ssh.insert_key = false
 
   config.vm.define "master" do |master|
     master.vm.box = "ubuntu/xenial64"
