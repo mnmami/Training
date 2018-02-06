@@ -79,7 +79,7 @@ cd ../sbin
 sudo ./start-slave.sh spark://192.168.0.10:7077
 ```
 
-## Play with Spark using Spark Shell
+## Open Spark Shell
 - Navigate to the *bin* folder and run spark-shell script passing Spark URL in argument:
 ```
 cd ../bin
