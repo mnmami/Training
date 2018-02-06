@@ -31,6 +31,7 @@ Vagrant.configure("2") do |config|
     slave.vm.network "forwarded_port", guest: 8081, host: 8081
     slave.vm.hostname = "ubuntu2"
   end
+ end
 ```
 - Windows users
   - Uncomment third line `# config.ssh.insert_key = false`
