@@ -6,7 +6,7 @@ sudo dpkg -i <dep file>
 ```
 Get deb file from: https://www.virtualbox.org/wiki/Linux_Downloads
 
-# Using package manager
+## Using package manager
 - Edit `/etc/apt/sources.list` and add following line to the end (replace <mydist> with your distribution - see below):
 ```
 deb https://download.virtualbox.org/virtualbox/debian <mydist> contrib
