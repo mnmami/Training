@@ -23,7 +23,7 @@ val fields = Seq(StructField("nr", IntegerType, nullable = true), StructField("n
 val schema = StructType(fields)
 
 # 7. Create a 'ROW RDD'
-# As we have a 'date' field, we create a date format
+# As we have a date field, we create a date format
 val format = new java.text.SimpleDateFormat("yyyy-MM-dd")
 
 # We map each line from step 5 to a row
