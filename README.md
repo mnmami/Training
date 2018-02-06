@@ -85,7 +85,7 @@ sudo ./start-slave.sh spark://192.168.0.10:7077
 - Navigate to the *bin* folder and run spark-shell script passing Spark URL in argument:
 ```
 cd ../bin
-sudo ./spark-shell.sh --master spark://192.168.0.10:7077
+sudo ./spark-shell --master spark://192.168.0.10:7077
 ```
 - The exercise starts from here. Go to https://github.com/mnmami/Training/blob/master/Example.scala for an example.
   - Transform a SQL dumpt into comma-separated values.
