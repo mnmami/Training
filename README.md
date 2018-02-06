@@ -87,10 +87,10 @@ sudo ./start-slave.sh spark://192.168.0.10:7077
 cd ../bin
 sudo ./spark-shell --master spark://192.168.0.10:7077
 ```
-- The exercise starts from here. Go to https://github.com/mnmami/Training/blob/master/Example.scala for an example.
+- Here is an example https://github.com/mnmami/Training/blob/master/Example.scala.
   - Transform a SQL dumpt into comma-separated values.
-  - create DataFrames from those values and query them.
-  - Save DataFrames to CSV files.
+  - Create DataFrames from those values and query them.
+  - Save DataFrame to a CSV file.
   
 ---
 
