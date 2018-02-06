@@ -41,7 +41,7 @@ Vagrant.configure("2") do |config|
 Once STEP 2 is done successfully, we obtain two Linux 16.04 boxes (guest virtual machines) connected between them using a (public) network. One will be used as Apache Spark Master, the other for the slave. We also exposed the ports 4040, 8080 and 8181 to the host machine (that runs Vagrant). We use those ports to open web interfaces to the master and slave.
 - Now, ssh to the master using `sudo vagrant ssh master` and open another terminal and ssh to the slave using `sudo vagrant ssh slave`. *Now you are moving to an Ubuntu System*.
 - In both boxes run to install the missing packages: `sudo apt-get update`
-- If the command hangs with the message `[Connecting to archive.ubuntu.com (2001:67c:1360:8c01::1a)]`. This is solved by disabling ip6, solve it using the steps here: https://askubuntu.com/questions/440649/how-to-disable-ipv6-in-ubuntu-14-04
+- If the command hangs with the message `[Connecting to archive.ubuntu.com (2001:67c:1360:8c01::1a)]`, solve it by disabling ip6, solve it using the steps here: https://askubuntu.com/questions/440649/how-to-disable-ipv6-in-ubuntu-14-04
 
 ## STEP 4: Install Java (in both boxes)
 - Run the dollowing 2 lines:
