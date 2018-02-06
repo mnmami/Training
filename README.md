@@ -92,5 +92,6 @@ sudo ./spark-shell --master spark://192.168.0.10:7077
   - create DataFrames from those values and query them.
   - Save DataFrames to CSV files.
   
-  
-For questions about the above, contat me on: mami@cs.uni-bonn.de
+---
+
+Have a question on the above? no panic, shoot me an email on: mami@cs.uni-bonn.de
