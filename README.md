@@ -68,7 +68,7 @@ sudo cp spark-env.sh.template spark-env.sh
 ```
 export SPARK_MASTER_HOST=192.186.0.10
 ```
-## Start Spark
+## STEP 6: Start Spark
 - In the Master box, navigate to the *sbin* folder and execute `start-master.sh` script:
 ```
 cd ../sbin
@@ -81,7 +81,7 @@ cd ../sbin
 sudo ./start-slave.sh spark://192.168.0.10:7077
 ```
 
-## Open Spark Shell
+## STEP 7: Open Spark Shell
 - Navigate to the *bin* folder and run spark-shell script passing Spark URL in argument:
 ```
 cd ../bin
