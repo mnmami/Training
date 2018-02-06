@@ -72,7 +72,7 @@ export SPARK_MASTER_HOST=192.186.0.10
 cd ../sbin
 sudo ./start-master.sh
 ```
-- This will return a message with a logging file, open the it to obtain the master *URL*. You should find `spark://192.168.0.10:7077`.
+- This will return a message mentioning a logging file, open it to obtain the master *URL*. You should find `spark://192.168.0.10:7077`.
 - In the Slave box, also navigate to the *sbin* folder and execute `start-slave.sh` script passing Spark URL in argument:
 ```
 cd ../sbin
