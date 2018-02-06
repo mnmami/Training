@@ -93,4 +93,4 @@ sudo ./spark-shell --master spark://192.168.0.10:7077
   - Save DataFrames to CSV files.
   
   
-  mami@cs.uni-bonn.de
+For questions about the above, contat me on: mami@cs.uni-bonn.de
