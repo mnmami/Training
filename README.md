@@ -86,6 +86,7 @@ sudo ./start-slave.sh spark://192.168.0.10:7077
 cd ../bin
 sudo ./spark-shell.sh --master spark://192.168.0.10:7077
 ```
-- There are two excersies to be done on the shell:
-  - Generate CSV from SQL dump: https://github.com/mnmami/Training/blob/master/Spark_SQL_to_CSV.scala
-  - Run SQL queries using Spark SQL: 
+- The exercise starts from here. Go to https://github.com/mnmami/Training/blob/master/Example.scala for an example.
+  - Transform a SQL dumpt into comma-separated values.
+  - create DataFrames from those values and query them.
+  - Save DataFrames to CSV files.
