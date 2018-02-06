@@ -11,7 +11,7 @@ val lines1 = lines.map(l =>l.substring(29))
 # 4. 'Drop' the two charecters ");" from the end (right) of each line
 val lines2 = lines1.map(l =>l.dropRight(2))
 
-# 5. 'Map' each line to multiple lines (flatMap), splitting the line on the string "____" (4 underscores)
+# 5. Map each line to multiple lines (using 'flatMap'), splitting the line on the string "____" (4 underscores)
 val lines3 = lines2.flatMap(l => l.split("____"))
 
 import org.apache.spark.sql._
@@ -22,8 +22,8 @@ val fields = Seq(StructField("nr", IntegerType, nullable = true), StructField("n
 
 val schema = StructType(fields)
 
-# 7. Create a ROW RDD
-# As we have a date field, we create a data format
+# 7. Create a 'ROW RDD'
+# As we have a 'date' field, we create a date format
 val format = new java.text.SimpleDateFormat("yyyy-MM-dd")
 
 # We map each line from step 5 to a row
