@@ -9,18 +9,25 @@
 - Create a folder for your Vagrant project: `mkdir myvagrant` then navigate to it `cd myvagrant`
 - Create a file called  `Vagrantfile` and put inside it:
 ```
-  config.vm.provision "shell", inline: "echo I'm ready"
+Vagrant.configure("2") do |config|
+  config.vm.provision "shell", inline: "echo Hello there"
+  config.ssh.insert_key = false
 
   config.vm.define "master" do |master|
     master.vm.box = "ubuntu/xenial64"
     master.vm.network "public_network", ip: "192.168.0.10"
+    master.vm.network "forwarded_port", guest: 4040, host: 4040
+    master.vm.network "forwarded_port", guest: 8080, host: 8080
     master.vm.hostname = "ubuntu1"
   end
 
   config.vm.define "slave" do |slave|
     slave.vm.box = "ubuntu/xenial64"
     slave.vm.network "public_network", ip: "192.168.0.11"
+    slave.vm.network "forwarded_port", guest: 8081, host: 8081
     slave.vm.hostname = "ubuntu2"
   end
-  ```
+```
 - Windows users add to the second line `config.ssh.insert_key = false`
+- Then run: `vagrant up` and wait a few minutes. 
+The Vagrantfile instructs to install two Linux 16.04 boxes and create a (public) network between them 
