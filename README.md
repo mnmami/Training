@@ -91,3 +91,6 @@ sudo ./spark-shell --master spark://192.168.0.10:7077
   - Transform a SQL dumpt into comma-separated values.
   - create DataFrames from those values and query them.
   - Save DataFrames to CSV files.
+  
+  
+  mami@cs.uni-bonn.de
