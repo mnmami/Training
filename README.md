@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
   end
 ```
 - Windows users add to the second line `config.ssh.insert_key = false`
-- Then run: `sudo vagrant up` and wait a few minutes (Windows users do not use sudo in all the fowlloing command lines). 
+- Then run: `sudo vagrant up` and wait a few minutes (Windows users do not use sudo in all the command lines). 
 - Once done without errors, we obtain two Linux 16.04 boxes (guest virtual machines) connected between them using a (public) network. One will be used as Apache Spark Master, the other for the slave. We also exposed the ports 4040, 8080 and 8181 to the host machine (that runs Vagrant). We use those ports to open web interfaces to the master and slave.
 - Then ssh to the master using `sudo vagrant ssh master` and open another terminal and ssh to the slave using `sudo vagrant ssh slave`
 
