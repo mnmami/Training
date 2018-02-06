@@ -5,7 +5,7 @@
 - Download and install Vagrant (pick the one that corresponds to your system & prefer the latest version 2.0.x): https://www.vagrantup.com/downloads.html 
   - For Linux (Debian) users see: https://github.com/mnmami/Training/blob/master/Vagrant_Ubuntu.md
 
-## STEP 2: Get and configur the environment
+## STEP 2: Get and configure the environment
 - Open a terminal and create a folder for your Vagrant project then navigate to it:
 ```
 mkdir myvagrant
@@ -33,8 +33,8 @@ Vagrant.configure("2") do |config|
   end
 ```
 - Windows users
-  - add in the third line `config.ssh.insert_key = false`
-  - do not use `sudo` in all the command lines
+  - Uncomment third line `# config.ssh.insert_key = false`
+  - do not use `sudo` in all the command lines of this step
 - Then run: `sudo vagrant up` and wait a few minutes 
 
 ## STEP 3: Connect (SSH) to the Master and Slave boxes
@@ -47,4 +47,41 @@ Once STEP 2 is done successfully, we obtain two Linux 16.04 boxes (guest virtual
 ```
 sudo apt-get install openjdk-8-jre
 sudo apt-get update
+```
+
+## STEP 5: Download and configure Spark (in both boxes)
+- we will install version 2.1, so run:
+```
+sudo wget https://archive.apache.org/dist/spark/spark-2.1.0/spark-2.1.0-bin-hadoop2.7.tgz
+sudo tar -xzvf  spark-2.1.0-bin-hadoop2.7.tgz 
+cd spark-2.1.0-bin-hadoop2.7
+
+```
+- Navigate to the *conf* folder and create Spark configurations file:
+```
+cd conf
+sudo cp spark-env.sh.template spark-env.sh
+``` 
+- Open `spark-env.sh` for editing and add the following line:
+```
+export SPARK_MASTER_HOST=192.186.0.10
+```
+## Start Spark
+- In the Master box, navigate to the *sbin* folder and execute `start-master.sh` script:
+```
+cd ../sbin
+sudo ./start-master.sh
+```
+- This will return a message with a logging file, open the it to obtain the master *URL*. You should find `spark://192.168.0.10:7077`.
+- In the Slave box, also navigate to the *sbin* folder and execute `start-slave.sh` script passing Spark URL in argument:
+```
+cd ../sbin
+sudo ./start-slave.sh spark://192.168.0.10:7077
+```
+
+## Play with Spark using Spark Shell
+- Navigate to the *bin* folder and run spark-shell script passing Spark URL in argument:
+```
+cd ../bin
+sudo ./spark-shell.sh --master spark://192.168.0.10:7077
 ```
