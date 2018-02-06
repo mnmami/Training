@@ -91,7 +91,8 @@ sudo ./spark-shell --master spark://192.168.0.10:7077
   - Transform a SQL dumpt into comma-separated values.
   - Create DataFrames from those values and query them.
   - Save DataFrame to a CSV file.
-  
+ 
+---
 ### Helpful tips
 - Use `vagrant snapshot push`/`pull` (see here https://www.vagrantup.com/docs/cli/snapshot.html for more) to create a snapshot (version) of your machine any time, so you can roll back to that version when things go wrong, no need to destroy and start anew.
 - Use `vagrant suspend`/`resume` (see here https://www.vagrantup.com/docs/cli/suspend.html for more) to save the state of the machine and pick up where you left off, and not start from scratch.
