@@ -30,6 +30,6 @@ val format = new java.text.SimpleDateFormat("yyyy-MM-dd")
 val rowRDD = lines3.map(_.split(",")).map(attributes => Row(attributes(0).toInt, attributes(1), attributes(2), attributes(3), attributes(4).toInt, java.sql.Date.valueOf(attributes(5).replace("'",""))))
  
  # 8. Create a DataFrame by applying the schema to the rows RDD
- # Write the results of the slaves to one file using 'coalesce(1)'
- # Include the header using 'option("header","true")'
+ # Write the results of the slaves to one file using `coalesce(1)`
+ # Include the header using `option("header","true")`
  personsDF.coalesce(1).write.option("header","true").csv("hdfs://172.18.160.17:54310/mohamed/person.csv")
