@@ -1,4 +1,4 @@
-# 1. Read a file to an RDD
+# 1. 'Read' a file to an RDD
 val sql = sc.textFile("09Person.sql")
 
 # 2. 'Filter' all lines and keep the one containing "INSERT INTO"
