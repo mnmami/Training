@@ -1,4 +1,4 @@
-# Install VirtualBox on Linux
+# Install VirtualBox on Linux (Debian)
 ## Install deb file
 ```
 wget <dep file>
