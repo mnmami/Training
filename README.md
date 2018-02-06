@@ -3,7 +3,7 @@
 - Download and install VirtualBox (pick the one that corresponds to your system & prefer version the latest version 5.2.x): https://www.virtualbox.org/wiki/Downloads
   - For Ubuntu (Debian) users see: https://github.com/mnmami/Training/blob/master/VirtualBox_Ubuntu.md
 - Download and install Vagrant (pick the one that corresponds to your system & prefer the latest version 2.0.x): https://www.vagrantup.com/downloads.html 
-  - For Linux (Debian) users see: https://github.com/mnmami/Training/blob/master/Vagrant_Ubuntu.md
+  - For Linux (Debian) users see: https://github.com/mnmami/Training/blob/master/Vagrant_Linux.md
 
 ## STEP 2: Get and configure the environment
 - Open a terminal and create a folder for your Vagrant project then navigate to it:
