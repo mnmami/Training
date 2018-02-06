@@ -1,4 +1,4 @@
-# Training
+# Big Data Hackaton
 ## STEP 1: Make the base setup
 - Download and install VirtualBox (pick the one that corresponds to your system & prefer version the latest version 5.2.x): https://www.virtualbox.org/wiki/Downloads
   - For Ubuntu (Debian) users see: https://github.com/mnmami/Training/blob/master/VirtualBox_Ubuntu.md
