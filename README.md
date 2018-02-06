@@ -95,7 +95,7 @@ sudo ./spark-shell --master spark://192.168.0.10:7077
 ---
 ### Helpful tips
 - Use `vagrant snapshot push`/`pull` (see here https://www.vagrantup.com/docs/cli/snapshot.html for more) to create a snapshot (version) of your machine any time, so you can roll back to that version when things go wrong, no need to destroy and start anew.
-- Use `vagrant suspend`/`resume` (see here https://www.vagrantup.com/docs/cli/suspend.html for more) to save the state of the machine and pick up where you left off, and not start from scratch.
+- Use `vagrant suspend`/`resume` (see here https://www.vagrantup.com/docs/cli/suspend.html for more) to save the state of the machine and pick up where you left off the last time, and avoid to start from scratch.
 ---
 
 Have a question on the above? no panic, shoot me an email on: mami@cs.uni-bonn.de
