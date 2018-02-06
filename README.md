@@ -86,4 +86,6 @@ sudo ./start-slave.sh spark://192.168.0.10:7077
 cd ../bin
 sudo ./spark-shell.sh --master spark://192.168.0.10:7077
 ```
-- Go here for the following of the training.
+- There are two excersies to be done on the shell:
+  - Generate CSV from SQL dump: https://github.com/mnmami/Training/blob/master/Spark_SQL_to_CSV.scala
+  - Run SQL queries using Spark SQL: 
