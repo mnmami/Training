@@ -1,11 +1,12 @@
 # Install VirtualBox on Linux
+## Install deb file
 ```
 wget <dep file>
 sudo dpkg -i <dep file>
 ```
 Get deb file from: https://www.virtualbox.org/wiki/Linux_Downloads
 
-# Install VirtualBox on Linux (Debian)
+# Using package manager
 - Edit `/etc/apt/sources.list` and add following line to the end (replace <mydist> with your distribution - see below):
 ```
 deb https://download.virtualbox.org/virtualbox/debian <mydist> contrib
