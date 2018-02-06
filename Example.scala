@@ -1,5 +1,5 @@
 # 1. 'Read' a file to an RDD
-val sql = sc.textFile("09Person.sql")
+val sql = sc.textFile("Person.sql")
 
 # 2. 'Filter' all lines and keep the one containing "INSERT INTO"
 val lines = sql.filter(_.contains("INSERT INTO"))
@@ -32,4 +32,4 @@ val rowRDD = lines3.map(_.split(",")).map(attributes => Row(attributes(0).toInt,
  # 8. Create a DataFrame by applying the schema to the rows RDD
  # Write the results of the slaves to one file using `coalesce(1)`
  # Include the header using `option("header","true")`
- personsDF.coalesce(1).write.option("header","true").csv("hdfs://172.18.160.17:54310/mohamed/person.csv")
+ personsDF.coalesce(1).write.option("header","true").csv("Person.csv")
