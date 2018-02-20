@@ -66,7 +66,7 @@ sudo cp spark-env.sh.template spark-env.sh
 ``` 
 - Open `spark-env.sh` for editing and add the following line:
 ```
-export SPARK_MASTER_HOST=192.186.0.10
+export SPARK_MASTER_HOST=192.168.0.10
 ```
 ## STEP 6: Start Spark
 - In the Master box, navigate to the *sbin* folder and execute `start-master.sh` script:
