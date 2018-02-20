@@ -36,8 +36,8 @@ Vagrant.configure("2") do |config|
 - Windows users
   - Uncomment third line `# config.ssh.insert_key = false`
   - do not use `sudo` in all the command lines of this step
-- Then run: `sudo vagrant up` and wait a few minutes 
-  - If you get asked which 'network interface' you should use, select the one you are connected to. For example, if you use an ethernet. Common names are *eth0* or *em0*, but to make sure run `ifconfig` and pick the one showing the ip address (192.168.0.10/11).
+- Then run: `sudo vagrant up` and wait a few minutes
+  - If you get asked which 'network interface' you should use, select the one you are connected to. For example, if you use an ethernet, common names are *eth0* or *em0*. To be sure, run `ifconfig` and pick the one showing the ip address (192.168.0.10/11).
   
 ## STEP 3: Connect (SSH) to the Master and Slave boxes
 Once STEP 2 is done successfully, we obtain two Linux 16.04 boxes (guest virtual machines) connected between them using a (public) network. One will be used as Apache Spark Master, the other for the slave. We also exposed the ports 4040, 8080 and 8181 to the host machine (that runs Vagrant). We use those ports to open web interfaces to the master and slave.
