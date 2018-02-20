@@ -99,4 +99,4 @@ sudo ./spark-shell --master spark://192.168.0.10:7077
 - Use `vagrant suspend`/`resume` (see here https://www.vagrantup.com/docs/cli/suspend.html for more) to save the state of the machine and pick up where you left off the last time, and avoid to start from scratch.
 ---
 
-Have a question on the above? no panic, shoot me an email on: mami@cs.uni-bonn.de
+Have a question on the above? no panic, shoot me an email at: mami@cs.uni-bonn.de
